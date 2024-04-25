@@ -1,18 +1,35 @@
+@import "https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300&amp;display=swap";
+
+body {
+    font-family: merriweather, sans-serif;
+}
+
 * {
     margin: 0;
     padding: 0;
 }
-:root{
+
+:root {
     --primaryColor: #402978;
     --secondaryColor: #ebaa49;
 }
+
 /* slider section start here  */
 .slider_section {}
 
 .sliderBox {
 
     height: 85vh;
+
     position: relative;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    z-index: 0;
 }
 
 .sliderBox img {
@@ -20,6 +37,8 @@
     width: 100%;
     object-fit: cover;
     z-index: 0;
+    position: absolute;
+    z-index: -1;
 }
 
 .sliderBox::after {
@@ -30,22 +49,24 @@
     left: 0;
     top: 0;
     background: #00000075;
-    z-index: 0;
+    z-index: -1;
 }
-.dot_pagi span{
+
+.dot_pagi span {
     background-color: var(--primaryColor);
 }
+
 /* slider section end here  */
 
 
 /* service not for sale part start here  */
 .srv_nsale {
 
-padding: 30px 0px;
+    padding: 30px 0px;
 
-background: var(--primaryColor);
+    background: var(--primaryColor);
 
-/* background-image: linear-gradient(45deg, #02944542, var(--secondaryColor)); */
+    /* background-image: linear-gradient(45deg, #02944542, var(--secondaryColor)); */
 }
 
 .svcLpart h1 {
@@ -81,13 +102,13 @@ background: var(--primaryColor);
 
 .count_box h4 {
 
-font-weight: 800;
+    font-weight: 800;
 
-color: var(--primaryColor);
+    color: var(--primaryColor);
 
-margin-bottom: 0px;
+    margin-bottom: 0px;
 
-font-size: 50px;
+    font-size: 50px;
 }
 
 .count_box p {
@@ -111,19 +132,19 @@ font-size: 50px;
 
 .content_title span {
 
-display: block;
+    display: block;
 
-height: 2px !important;
+    height: 2px !important;
 
-width: 100px !important;
+    width: 100px !important;
 
-left: 0;
+    left: 0;
 
-background: var(--primaryColor) !important;
+    background: var(--primaryColor) !important;
 
-border-radius: 10px !important;
+    border-radius: 10px !important;
 
-box-shadow: none !important;
+    box-shadow: none !important;
 }
 
 .features ul {
@@ -338,7 +359,8 @@ box-shadow: none !important;
 
     object-fit: contain;
 }
-.service_box a{
+
+.service_box a {
     text-decoration: none;
     color: #000;
 }
@@ -421,17 +443,21 @@ a:hover {
 .tab_hide {
     display: block;
 }
+
 .nav_show {
     display: none;
 }
-.nav_hide{
+
+.nav_hide {
     display: block;
 }
-@media(max-width: 992px){
+
+@media(max-width: 992px) {
     .nav_show {
         display: block;
     }
-    .nav_hide{
+
+    .nav_hide {
         display: none;
     }
 }
@@ -440,22 +466,47 @@ a:hover {
     .tab_hide {
         display: none;
     }
-    
+
 }
-.btn_primary{
+
+.btn_primary {
     background-color: var(--primaryColor);
     color: #fff;
 }
-.btn_primary:hover{
+
+.btn_primary:hover {
     background-color: var(--secondaryColor);
 }
-.btn_secondary{
+
+.btn_secondary {
     background-color: var(--secondaryColor);
 }
-.btn_secondary:hover{
+
+.btn_secondary:hover {
     background-color: #adadad;
 }
 
+.content_container {
+    margin: 10px 0px;
+}
 
 
 /* team page end here  */
+
+.sliderBox {}
+
+.sliderBox h1 {
+
+    color: #fff;
+
+    font-weight: 800;
+
+    font-size: 50px;
+}
+
+.sliderBox p {
+
+    color: #fff;
+
+    max-width: 500px;
+}
